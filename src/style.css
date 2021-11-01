@@ -1,0 +1,187 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.current {
+    color: black;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style-type: none;
+    color: grey;
+}
+
+.navbar ul li {
+    cursor: pointer;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    gap: 20px;
+}
+
+/* dropdown */
+.dropdown p,
+ul.dropdownitems li {
+    width: 120px;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: lightgrey;
+    padding: 0 10px;
+    color: rgb(66, 66, 66);
+}
+
+.dropdown p {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0;
+    text-align: center;
+}
+
+ul.dropdownitems {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+ul.dropdownitems li {
+    list-style-type: none;
+
+    opacity: 0;
+    margin: -1px 0;
+}
+
+
+ul.dropdownitems li.visible {
+    opacity: 1;
+}
+
+/* mobile menu  */
+.tabMenu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    background-color: rgba(48, 48, 48, 0.6);
+    color: lightgrey;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.tabMenu .tabItem {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    border-color: transparent;
+}
+
+.tabMenu .tabItem.tabItem-current {
+    color: white;
+    border-bottom: solid;
+    border-width: 0 0 2px 0;
+}
+
+
+.top {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/* image slider */
+.imageSlider {
+    width: 250px;
+    display: flex;
+    /* only show the first-ordered image */
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: lightgrey;
+    border-radius: 10px;
+    gap: 100px;
+    /* show only the current image within the slider */
+    overflow: hidden;
+}
+
+.sliderButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-style: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sliderButton:hover {
+    background-color: lightgrey;
+}
+
+
+.images {
+    flex: 0;
+    padding: 0;
+    width: 300px;
+    height: auto;
+}
+
+/* current image */
+.image1 {
+    order: 1;
+}
+
+/* on queues */
+.image2 {
+    order: 2;
+}
+
+.image3 {
+    order: 3;
+}
+
+.image4 {
+    order: 4;
+}
+
+.image5 {
+    order: 5;
+}
+
+.navCircles {
+    display: flex;
+    gap: 20px;
+}
+
+.navCircles p {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.currentCircle {
+    background-color: grey;
+}
